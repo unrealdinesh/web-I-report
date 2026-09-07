@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Dinesh Basnet",
+    "role": "Web Developer",
+    "email": "dinesh.basnet@example.com",
+    "faculty": "BCA 4th Semester",
+    "skills": ["JavaScript", "HTML5", "CSS3", "AJAX"]
+  },
+  {
+    "id": 2,
+    "name": "Aarav Sharma",
+    "role": "Frontend Designer",
+    "email": "aarav.sharma@example.com",
+    "faculty": "BIT 4th Semester",
+    "skills": ["UI/UX", "jQuery", "CSS Grids", "Figma"]
+  },
+  {
+    "id": 3,
+    "name": "Sophia Karki",
+    "role": "Database Administrator",
+    "email": "sophia.karki@example.com",
+    "faculty": "CSIT 4th Semester",
+    "skills": ["MySQL", "JSON API", "Node.js", "MongoDB"]
+  }
+]

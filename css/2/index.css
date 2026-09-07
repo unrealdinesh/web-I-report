@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding: 8px;
+}
+ul {
+  list-style: none;
+}
+.text-fg {
+  color: #fff;
+}
+.text-orange {
+  color: rgb(255, 146, 3);
+}
+
+.bold {
+  font-weight: 700;
+}
+.semibold {
+  font-weight: 600;
+}
+.text-lg{
+  font-size: 18px;
+}
+.text-base{
+  font-size: 16px;
+}
+
+header {
+  background: linear-gradient(
+    to right,
+    rgb(0, 7, 122),
+    rgba(98, 98, 243, 0.845)
+  );
+  padding: 32px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+header h3 {
+  margin-bottom: 32px;
+}
+
+.card-wrapper{
+  margin-block: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 12px;
+}
+.card {
+  border: 1px solid rgb(198, 197, 197);
+  padding: 8px;
+  border-radius: 8px;
+}
+.rating {
+  display: flex;
+  gap: 4px;
+  margin-block: 16px;
+}
+.features{
+  margin-block: 12px;
+}
+.features.included {
+  color: green;
+}
+.features.excluded {
+  color: red;
+}
+
+
+footer {
+  background: rgb(226, 240, 248);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  border-radius: 4px;
+}
+
+footer button {
+  all: unset;
+  background: rgb(240, 37, 37);
+  padding: 8px 16px;
+  border-radius: 4px;
+}

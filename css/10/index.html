@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Lab Report 10</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <main id="main-content">
+    <div class="report-container">
+
+      <div class="column overflow-column">
+        
+        <div class="demo-wrapper">
+          <h3>Overflow: visible</h3>
+          <div class="overflow-box box-visible">
+            <div class="overflow-content">This content overflows the container.</div>
+          </div>
+        </div>
+
+        <div class="demo-wrapper">
+          <h3>Overflow: hidden</h3>
+          <div class="overflow-box box-hidden">
+            <div class="overflow-content">This content is hidden outside the container bounds.</div>
+          </div>
+        </div>
+
+        <div class="demo-wrapper">
+          <h3>Overflow: scroll</h3>
+          <div class="overflow-box box-scroll">
+            <div class="overflow-content">This content is scrollable with custom scrollbars provided inside the box.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="column clear-column">
+
+        <div class="demo-wrapper">
+          <h3>Clear: right</h3>
+          <div class="clear-box">
+            <div class="float-right-box">Floated right</div>
+            <div class="cleared-content clear-right-text">This content is cleared on the right.</div>
+          </div>
+        </div>
+
+        <div class="demo-wrapper">
+          <h3>Clear: both</h3>
+          <div class="clear-box">
+            <div class="float-left-box">Floated left</div>
+            <div class="float-right-box">Floated right</div>
+            <div class="cleared-content clear-both-bar">This content is cleared on both sides.</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>

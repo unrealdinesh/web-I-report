@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Lab Report 6</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <main id="main-content">
+    <!-- Section 1: Anchor Pseudo-Classes -->
+    <section class="section-box anchor-section">
+      <h2 class="anchor-title">Anchor Pseudo-Classes</h2>
+      <div class="link-list">
+        <p><a href="https://claude.ai" target="_blank" class="active-demo">Visit Claude.ai</a></p>
+        <p><a href="https://maps.google.com" target="_blank">Visit Google Maps</a></p>
+        <p><a href="https://google.com" target="_blank">Visit Google.com</a></p>
+      </div>
+    </section>
+
+    <!-- Section 2: CSS Tooltip Demo -->
+    <section class="section-box tooltip-section">
+      <h2 class="tooltip-title">CSS Tooltip</h2>
+      <p class="tooltip-subtitle">Hover over the buttons below to see different tooltip variations:</p>
+
+      <div class="buttons-grid">
+        <!-- Row 1: Position Variations -->
+        <div class="button-row">
+          <button class="btn tooltip tooltip-top" data-tooltip="This is a default tooltip on top">Default Tooltip</button>
+          <button class="btn tooltip tooltip-bottom" data-tooltip="This is a tooltip on bottom">Bottom Tooltip</button>
+          <button class="btn tooltip tooltip-left" data-tooltip="This is a tooltip on left">Left Tooltip</button>
+          <button class="btn tooltip tooltip-right" data-tooltip="This is a tooltip on right">Right Tooltip</button>
+        </div>
+
+        <!-- Row 2: Color Variations -->
+        <div class="button-row">
+          <button class="btn tooltip tooltip-top tooltip-primary" data-tooltip="Primary color tooltip">Primary Tooltip</button>
+          <button class="btn tooltip tooltip-top tooltip-success" data-tooltip="Success color tooltip">Success Tooltip</button>
+          <button class="btn tooltip tooltip-top tooltip-warning" data-tooltip="Warning color tooltip">Warning Tooltip</button>
+          <button class="btn tooltip tooltip-top tooltip-danger" data-tooltip="Danger color tooltip">Danger Tooltip</button>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

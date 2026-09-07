@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Lab Report 9</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <main id="main-content">
+    <div class="report-wrapper">
+
+      <section class="sizing-section">
+        <div class="demo-wrapper">
+          <h3 class="box-title">box-sizing: content-box;</h3>
+          <div class="box content-box">
+            <p><strong>(width and height only apply to the content of the element)</strong></p>
+            <p>This div has a width of 400px, but the full width is 400px + 20px (left and right border) + 40px (left and right padding) = 460px.</p>
+          </div>
+        </div>
+
+        <div class="demo-wrapper">
+          <h3 class="box-title">box-sizing: border-box;</h3>
+          <div class="box border-box">
+            <p><strong>(width and height apply to all parts of the element: content, padding, and borders)</strong></p>
+            <p>Here, the full width of the box is 400px, including content, padding, and borders.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="decoration-section">
+        <h2>box-decoration-break Property</h2>
+
+        <div class="break-demo">
+          <h3>box-decoration-break: slice (default);</h3>
+          <p>
+            <span class="break-text slice-text">This is a multi-line highlighted text demonstrating how box-decoration-break slice works across multiple lines in CSS layout.</span>
+          </p>
+        </div>
+
+        <div class="break-demo">
+          <h3>box-decoration-break: clone;</h3>
+          <p>
+            <span class="break-text clone-text">This is a multi-line highlighted text demonstrating how box-decoration-break clone renders independent borders and padding for each line fragment.</span>
+          </p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</body>
+</html>

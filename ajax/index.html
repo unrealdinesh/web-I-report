@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX Lab Report - Programs 1 &amp; 2 (Q16 &amp; Q17)</title>
+
+    <!-- External CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- JavaScript Files -->
+    <script src="1.js"></script>
+    <script src="2.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>AJAX Lab Report - Programs 1 &amp; 2</h1>
+
+      <!-- Question 1 / 16 -->
+      <div class="card">
+        <h2>1 (Q16). Fetch JSON Data &amp; Render Card Layout</h2>
+        <p>
+          Write an AJAX program to fetch a JSON data object, parse it, and display its contents in HTML using a card layout.
+        </p>
+
+        <div class="btn-group">
+          <button onclick="fetchJsonAndDisplayCards()">Fetch JSON &amp; Display Cards</button>
+        </div>
+
+        <div class="result-box" id="json-card-container">
+          Click the button above to load JSON data asynchronously.
+        </div>
+      </div>
+
+      <!-- Question 2 / 17 -->
+      <div class="card">
+        <h2>2 (Q17). Read File Asynchronously with Status 200 OK Handling</h2>
+        <p>
+          Write an AJAX program to read a file asynchronously and render its contents in HTML.<br />
+          • Use proper server response handling.<br />
+          • Process the file only if the status code is 200 (OK).
+        </p>
+
+        <div class="btn-group">
+          <button onclick="fetchFileAsynchronously('sample.txt', 'file-content-container')">
+            Read 'sample.txt' (HTTP 200 OK)
+          </button>
+          <button class="btn-danger" onclick="fetchFileAsynchronously('nonexistent.txt', 'file-content-container')">
+            Test Invalid File (HTTP 404 Error)
+          </button>
+        </div>
+
+        <div class="result-box" id="file-content-container">
+          Click a button above to initiate an asynchronous file request.
+        </div>
+      </div>
+    </div>
+
+    <!-- Auto Load Default Demos -->
+    <script>
+      window.addEventListener("load", () => {
+        fetchJsonAndDisplayCards();
+      });
+    </script>
+  </body>
+</html>

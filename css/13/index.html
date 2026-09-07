@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Lab Report 13 - Tech News 2026 Table Layout</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- Main Outer Container Table -->
+    <table class="main-layout-table" align="center" cellspacing="0" cellpadding="0">
+      <!-- Row 1: Header -->
+      <tr>
+        <td colspan="3" class="header-cell">
+          <h1 class="site-title">Tech News 2026</h1>
+          <p class="site-tagline">
+            Your trusted source for AI, gadgets, software and innovation
+          </p>
+        </td>
+      </tr>
+
+      <!-- Row 2: Navigation Bar -->
+      <tr>
+        <td colspan="3" class="nav-cell">
+          <table class="nav-table" width="100%" cellspacing="0" cellpadding="0">
+            <tr>
+              <td><a href="#" class="active">Home</a></td>
+              <td><a href="#">AI</a></td>
+              <td><a href="#">Mobile</a></td>
+              <td><a href="#">Reviews</a></td>
+              <td><a href="#">Cybersecurity</a></td>
+              <td><a href="#">Contact</a></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <!-- Row 3: Main Content (3-Column Layout using <td>) -->
+      <tr>
+        <!-- Left Sidebar Column -->
+        <td class="sidebar-left-cell" valign="top">
+          <div class="sidebar-block">
+            <h3 class="section-title">Trending Topics</h3>
+            <ul class="trending-list">
+              <li><a href="#">Apple's AI Strategy Gains Momentum</a></li>
+              <li><a href="#">Samsung Galaxy S26 Ultra Review</a></li>
+              <li><a href="#">Google Gemini AI Updates</a></li>
+              <li><a href="#">Meta's Custom AI Chips</a></li>
+              <li><a href="#">Microsoft Copilot Evolution</a></li>
+            </ul>
+          </div>
+
+          <div class="featured-card">
+            <h4 class="featured-title">Featured</h4>
+            <p class="featured-text">
+              Explore the latest AI-powered laptops and smartphones of 2026.
+            </p>
+            <a href="#" class="blue-link">Read Buying Guide</a>
+          </div>
+        </td>
+
+        <!-- Middle Main News Column -->
+        <td class="main-content-cell" valign="top">
+          <h2 class="section-title main-news-heading">
+            Latest Technology News
+          </h2>
+
+          <!-- Article 1 -->
+          <div class="news-article">
+            <h3 class="article-title">
+              Apple Continues Strong Push into Artificial Intelligence
+            </h3>
+            <div class="article-date">July 2026</div>
+            <p class="article-excerpt">
+              Apple has strengthened investor confidence with its AI strategy,
+              focusing on intelligent software features, ecosystem integration, and
+              next-generation Siri improvements across iPhone, iPad, and Mac
+              devices.
+            </p>
+            <a href="#" class="read-more">Read More &rarr;</a>
+          </div>
+
+          <hr class="article-divider" />
+
+          <!-- Article 2 -->
+          <div class="news-article">
+            <h3 class="article-title">
+              Google Required to Open Android AI Features in Europe
+            </h3>
+            <div class="article-date">July 2026</div>
+            <p class="article-excerpt">
+              European regulators announced new Digital Markets Act requirements
+              that will allow competing AI assistants greater access to Android
+              capabilities while emphasizing privacy safeguards.
+            </p>
+            <a href="#" class="read-more">Read More &rarr;</a>
+          </div>
+
+          <hr class="article-divider" />
+
+          <!-- Article 3 -->
+          <div class="news-article">
+            <h3 class="article-title">
+              Meta Expands Investment in Custom AI Infrastructure
+            </h3>
+            <div class="article-date">July 2026</div>
+            <p class="article-excerpt">
+              Meta continues expanding its in-house AI hardware program with new
+              accelerator chips designed to reduce dependence on third-party
+              GPUs while supporting future AI services.
+            </p>
+            <a href="#" class="read-more">Read More &rarr;</a>
+          </div>
+        </td>
+
+        <!-- Right Sidebar Column -->
+        <td class="sidebar-right-cell" valign="top">
+          <div class="sidebar-block">
+            <h3 class="section-title">Upcoming Events</h3>
+            <ul class="events-list">
+              <li>
+                <div class="event-name">Apple Event</div>
+                <div class="event-date">September 2026</div>
+              </li>
+              <li>
+                <div class="event-name">Microsoft Ignite</div>
+                <div class="event-date">November 2026</div>
+              </li>
+              <li>
+                <div class="event-name">CES 2027 Preview</div>
+                <div class="event-date">January 2027</div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="sidebar-block newsletter-block">
+            <h3 class="section-title">Newsletter</h3>
+            <p class="newsletter-desc">Subscribe for weekly technology news.</p>
+            <form action="#" method="POST" class="newsletter-form">
+              <input
+                type="email"
+                placeholder="Email Address"
+                required
+                class="email-input"
+              />
+              <button type="submit" class="subscribe-btn">Subscribe</button>
+            </form>
+          </div>
+        </td>
+      </tr>
+
+      <!-- Row 4: Footer -->
+      <tr>
+        <td colspan="3" class="footer-cell">
+          <p class="copyright-text">
+            &copy; 2026 Tech News. All rights reserved.
+          </p>
+          <p class="social-links">
+            Follow us: <a href="#">Twitter</a> | <a href="#">LinkedIn</a> |
+            <a href="#">YouTube</a>
+          </p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

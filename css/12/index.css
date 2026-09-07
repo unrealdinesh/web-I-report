@@ -1,0 +1,140 @@
+/* Reset & Global Box Sizing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #777;
+  scroll-behavior: smooth;
+}
+
+/* Parallax Background Common Settings */
+.bgimg-1,
+.bgimg-2,
+.bgimg-3 {
+  position: relative;
+  opacity: 0.85;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: opacity 0.3s ease;
+}
+
+/* First Parallax Image - Full Viewport Height */
+.bgimg-1 {
+  background-image:
+    url("/home/iamdineshbasnet/.gemini/antigravity-ide/brain/686ed839-f94c-4f57-a8fd-a3d4129cbea4/parallax_bg1_1787381648379.png"),
+    url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80");
+  min-height: 100vh;
+}
+
+/* Second Parallax Image - 400px Height */
+.bgimg-2 {
+  background-image:
+    url("/home/iamdineshbasnet/.gemini/antigravity-ide/brain/686ed839-f94c-4f57-a8fd-a3d4129cbea4/parallax_bg2_1787381671039.png"),
+    url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80");
+  min-height: 400px;
+}
+
+/* Third Parallax Image - 400px Height */
+.bgimg-3 {
+  background-image:
+    url("/home/iamdineshbasnet/.gemini/antigravity-ide/brain/686ed839-f94c-4f57-a8fd-a3d4129cbea4/parallax_bg3_1787381695927.png"),
+    url("https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1920&q=80");
+  min-height: 400px;
+}
+
+/* Captions and Text Overlay */
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-50%);
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px 28px;
+  font-size: 25px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+}
+
+.caption span.transparent-border {
+  background-color: transparent;
+  color: #f7f7f7;
+  border: 2px solid #f7f7f7;
+  backdrop-filter: blur(4px);
+}
+
+/* Content Sections */
+.content-block {
+  padding: 60px 80px;
+  text-align: center;
+  position: relative;
+}
+
+.light-block {
+  background-color: #ffffff;
+  color: #777777;
+}
+
+.dark-block {
+  background-color: #282e34;
+  color: #ddd;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.dark-block h3 {
+  color: #ffffff;
+}
+
+p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1,
+  .bgimg-2,
+  .bgimg-3 {
+    background-attachment: scroll;
+  }
+
+  .content-block {
+    padding: 40px 20px;
+  }
+
+  .caption span.border {
+    font-size: 18px;
+    letter-spacing: 6px;
+    padding: 12px 18px;
+  }
+}

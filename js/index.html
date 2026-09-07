@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Lab Report - Program Suite</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f4f6f9;
+        color: #212529;
+        padding: 20px;
+        line-height: 1.6;
+      }
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      h1 {
+        color: #1e70bf;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 26px;
+      }
+      .card {
+        background-color: #ffffff;
+        border: 1px solid #ced4da;
+        border-radius: 6px;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+      .card h2 {
+        font-size: 18px;
+        color: #333333;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #1e70bf;
+        padding-bottom: 5px;
+      }
+      .card p {
+        font-size: 13px;
+        color: #666666;
+        margin-bottom: 15px;
+      }
+      .form-group {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 12px;
+        flex-wrap: wrap;
+      }
+      input[type="text"],
+      input[type="number"] {
+        padding: 8px 12px;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        font-size: 14px;
+        flex: 1;
+        min-width: 150px;
+      }
+      button {
+        background-color: #1e70bf;
+        color: #ffffff;
+        border: none;
+        padding: 8px 18px;
+        border-radius: 4px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #155799;
+      }
+      .result-box {
+        background-color: #f8f9fa;
+        border: 1px solid #e9ecef;
+        padding: 12px;
+        border-radius: 4px;
+        font-family: monospace;
+        font-size: 13px;
+        color: #212529;
+        white-space: pre-wrap;
+      }
+    </style>
+
+    <!-- Include JavaScript Files -->
+    <script src="1.js"></script>
+    <script src="2.js"></script>
+    <script src="3.js"></script>
+    <script src="4.js"></script>
+    <script src="5.js"></script>
+    <script src="6.js"></script>
+    <script src="7.js"></script>
+    <script src="8.js"></script>
+    <script src="9.js"></script>
+    <script src="10.js"></script>
+    <script src="11.js"></script>
+    <script src="12.js"></script>
+    <script src="13.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>JavaScript Program Lab Report</h1>
+
+      <!-- Question 1 -->
+      <div class="card">
+        <h2>1. Reverse a String</h2>
+        <p>
+          Takes a string input from the user and displays it in reverse order.
+        </p>
+        <div class="form-group">
+          <input
+            type="text"
+            id="q1-input"
+            placeholder="Enter a string (e.g. JavaScript)"
+            value="JavaScript"
+          />
+          <button onclick="executeQ1()">Reverse String</button>
+        </div>
+        <div class="result-box" id="q1-result">Output will appear here...</div>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="card">
+        <h2>2. Number Reverse, Palindrome &amp; Armstrong Check</h2>
+        <p>
+          Accepts a number and finds its reverse, checks if it's a palindrome,
+          and checks if it's an Armstrong number.
+        </p>
+        <div class="form-group">
+          <input
+            type="number"
+            id="q2-input"
+            placeholder="Enter a number (e.g. 153 or 121)"
+            value="153"
+          />
+          <button onclick="executeQ2()">Analyze Number</button>
+        </div>
+        <div class="result-box" id="q2-result">Output will appear here...</div>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="card">
+        <h2>3. Add Two Numbers Only If Both Are Prime</h2>
+        <p>
+          Adds two numbers only if both are prime using a user-defined isPrime()
+          function.
+        </p>
+        <div class="form-group">
+          <input
+            type="number"
+            id="q3-num1"
+            placeholder="First number"
+            value="7"
+          />
+          <input
+            type="number"
+            id="q3-num2"
+            placeholder="Second number"
+            value="11"
+          />
+          <button onclick="executeQ3()">Add If Prime</button>
+        </div>
+        <div class="result-box" id="q3-result">Output will appear here...</div>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="card">
+        <h2>4. Add If Both Even, Otherwise Find Difference</h2>
+        <p>
+          Adds two numbers if both are even, otherwise finds their difference
+          using user-defined functions.
+        </p>
+        <div class="form-group">
+          <input
+            type="number"
+            id="q4-num1"
+            placeholder="First number"
+            value="8"
+          />
+          <input
+            type="number"
+            id="q4-num2"
+            placeholder="Second number"
+            value="4"
+          />
+          <button onclick="executeQ4()">Process Numbers</button>
+        </div>
+        <div class="result-box" id="q4-result">Output will appear here...</div>
+      </div>
+
+      <!-- Question 5 -->
+      <div class="card">
+        <h2>5. Compare Two Strings</h2>
+        <p>
+          Compares two strings. If equal, displays uppercase string; otherwise
+          displays "The strings are not equal".
+        </p>
+        <div class="form-group">
+          <input
+            type="text"
+            id="q5-str1"
+            placeholder="First string"
+            value="hello"
+          />
+          <input
+            type="text"
+            id="q5-str2"
+            placeholder="Second string"
+            value="hello"
+          />
+          <button onclick="executeQ5()">Compare Strings</button>
+        </div>
+        <div class="result-box" id="q5-result">Output will appear here...</div>
+      </div>
+
+      <!-- Question 6 -->
+      <div class="card">
+        <h2>6. Associative Array &amp; for...in Loop</h2>
+        <p>
+          Creates an associative array (object key-value pairs) in JavaScript and displays its content using a for...in loop.
+        </p>
+        <div class="form-group">
+          <button onclick="executeQ6()">Display Associative Array</button>
+        </div>
+        <div class="result-box" id="q6-result">Click button to display content...</div>
+      </div>
+
+      <!-- Question 7 -->
+      <div class="card">
+        <h2>7. Object Constructor &amp; Method to Change Name</h2>
+        <p>
+          Uses an object constructor to set a person's first &amp; last name with a method to change the last name. Displays name before &amp; after.
+        </p>
+        <div class="form-group">
+          <input type="text" id="q7-fname" placeholder="First Name" value="Dinesh" />
+          <input type="text" id="q7-lname" placeholder="Current Last Name" value="Sharma" />
+          <input type="text" id="q7-newlname" placeholder="New Last Name" value="Basnet" />
+          <button onclick="executeQ7()">Execute Person Constructor</button>
+        </div>
+        <div class="result-box" id="q7-result">Output will appear here...</div>
+      </div>
+
+      <!-- Question 8 -->
+      <div class="card">
+        <h2>8. Real-Time Clock (Hour:Minute:Second)</h2>
+        <p>
+          Displays a live updating real-time digital clock in the HH:MM:SS format.
+        </p>
+        <div class="result-box" id="q8-result">Initializing clock...</div>
+      </div>
+
+      <!-- Question 9 -->
+      <div class="card">
+        <h2>9. Date Comparison with February 15, 2015</h2>
+        <p>
+          Uses the Date object to compare today's date with February 15, 2015, and triggers an Alert showing whether today is before or after.
+        </p>
+        <div class="form-group">
+          <button onclick="executeQ9(true)">Compare &amp; Show Alert</button>
+          <button onclick="executeQ9(false)" style="background-color: #5bc0de;">Compare (No Alert)</button>
+        </div>
+        <div class="result-box" id="q9-result">Output will appear here...</div>
+      </div>
+
+      <!-- Question 10 -->
+      <div class="card">
+        <h2>10. Car Class &amp; Inheritance for Age Calculation</h2>
+        <p>
+          Defines a Car class with model &amp; year properties, and uses class inheritance to calculate the car's age based on current year.
+        </p>
+        <div class="form-group">
+          <input type="text" id="q10-model" placeholder="Car Model" value="Toyota Camry" />
+          <input type="number" id="q10-year" placeholder="Manufacturing Year" value="2018" />
+          <button onclick="executeQ10()">Calculate Car Details &amp; Age</button>
+        </div>
+        <div class="result-box" id="q10-result">Output will appear here...</div>
+      </div>
+
+      <!-- Question 11 -->
+      <div class="card">
+        <h2>11. Error Handling (try...catch &amp; window.onerror)</h2>
+        <p>
+          Demonstrates JavaScript error handling using (a) try...catch block and (b) global window.onerror event handler.
+        </p>
+        <div class="form-group">
+          <input type="number" id="q11-num1" placeholder="Dividend" value="10" />
+          <input type="number" id="q11-num2" placeholder="Divisor" value="0" />
+          <button onclick="executeQ11a()">Test try...catch</button>
+          <button onclick="triggerWindowOnErrorDemo()" style="background-color: #f0ad4e;">Test window.onerror</button>
+        </div>
+        <div class="result-box" id="q11-result">Click buttons to test error handlers...</div>
+        <div class="result-box" id="q11b-result" style="margin-top: 10px; color: #b94a48; background-color: #f2dede;">window.onerror output will appear here...</div>
+      </div>
+
+      <!-- Question 12 -->
+      <div class="card">
+        <h2>12. Cookie Management (Set, Get &amp; Delete Cookie)</h2>
+        <p>
+          Sets a cookie, gets/reads a cookie, and deletes a cookie in JavaScript.
+        </p>
+        <div class="form-group">
+          <input type="text" id="q12-key" placeholder="Cookie Name" value="user_session" />
+          <input type="text" id="q12-val" placeholder="Cookie Value" value="ActiveToken123" />
+          <input type="number" id="q12-days" placeholder="Expiry Days" value="7" />
+        </div>
+        <div class="form-group">
+          <button onclick="executeQ12('set')">Set Cookie</button>
+          <button onclick="executeQ12('get')" style="background-color: #5cb85c;">Get Cookie</button>
+          <button onclick="executeQ12('delete')" style="background-color: #d9534f;">Delete Cookie</button>
+        </div>
+        <div class="result-box" id="q12-result">Output will appear here...</div>
+      </div>
+
+      <!-- Question 13 -->
+      <div class="card">
+        <h2>13. Form Input Validation (Email, Phone &amp; Password)</h2>
+        <p>
+          Validates form inputs based on specific rules:<br />
+          • <b>Email:</b> Must be valid email ending with <code>@gmail.com</code> or <code>@hotmail.com</code><br />
+          • <b>Phone:</b> NTC (<code>9841******</code> / <code>9851******</code>) or NCELL (<code>980*******</code>)<br />
+          • <b>Password:</b> Min 12 chars, at least 1 uppercase, 1 lowercase, 1 digit, and 1 special symbol.
+        </p>
+        <form onsubmit="event.preventDefault(); executeQ13();">
+          <div class="form-group">
+            <input type="text" id="q13-email" placeholder="Email (e.g. dinesh@gmail.com)" value="dinesh@gmail.com" />
+            <input type="text" id="q13-phone" placeholder="Phone Number (e.g. 9841123456)" value="9841123456" />
+          </div>
+          <div class="form-group">
+            <input type="password" id="q13-password" placeholder="Password (e.g. Secret@123456)" value="Secret@123456" />
+            <button type="submit">Validate Form Inputs</button>
+          </div>
+        </form>
+        <div class="result-box" id="q13-result">Output will appear here...</div>
+      </div>
+    </div>
+
+    <!-- UI Handlers -->
+    <script>
+      function executeQ1() {
+        const val = document.getElementById("q1-input").value;
+        const res = reverseString(val);
+        document.getElementById("q1-result").innerText =
+          `Original: "${val}"\nReversed: "${res}"`;
+      }
+
+      function executeQ2() {
+        const val = document.getElementById("q2-input").value;
+        const info = analyzeNumber(val);
+        if (info) {
+          document.getElementById("q2-result").innerText =
+            `Number: ${info.number}\nReverse: ${info.reverse}\nIs Palindrome? ${info.isPalindrome ? "Yes" : "No"}\nIs Armstrong? ${info.isArmstrong ? "Yes" : "No"}`;
+        }
+      }
+
+      function executeQ3() {
+        const n1 = document.getElementById("q3-num1").value;
+        const n2 = document.getElementById("q3-num2").value;
+        const info = addIfPrimes(n1, n2);
+        document.getElementById("q3-result").innerText = info.message;
+      }
+
+      function executeQ4() {
+        const n1 = document.getElementById("q4-num1").value;
+        const n2 = document.getElementById("q4-num2").value;
+        const info = processNumbers(n1, n2);
+        if (info) {
+          document.getElementById("q4-result").innerText = info.message;
+        }
+      }
+
+      function executeQ5() {
+        const s1 = document.getElementById("q5-str1").value;
+        const s2 = document.getElementById("q5-str2").value;
+        const info = compareTwoStrings(s1, s2);
+        document.getElementById("q5-result").innerText = info.message;
+      }
+
+      function executeQ6() {
+        const info = displayAssociativeArray();
+        document.getElementById("q6-result").innerText = info.message;
+      }
+
+      function executeQ7() {
+        const fname = document.getElementById("q7-fname").value;
+        const lname = document.getElementById("q7-lname").value;
+        const newlname = document.getElementById("q7-newlname").value;
+        const info = demonstratePersonConstructor(fname, lname, newlname);
+        document.getElementById("q7-result").innerText = info.message;
+      }
+
+      function executeQ9(triggerAlert) {
+        const info = compareDateWithFeb152015(triggerAlert);
+        document.getElementById("q9-result").innerText = info.message;
+      }
+
+      function executeQ10() {
+        const model = document.getElementById("q10-model").value;
+        const year = document.getElementById("q10-year").value;
+        const info = demonstrateCarClass(model, year);
+        document.getElementById("q10-result").innerText = info.details;
+      }
+
+      function executeQ11a() {
+        const n1 = document.getElementById("q11-num1").value;
+        const n2 = document.getElementById("q11-num2").value;
+        const res = demonstrateTryCatch(n1, n2);
+        document.getElementById("q11-result").innerText = res;
+      }
+
+      function executeQ12(action) {
+        const key = document.getElementById("q12-key").value;
+        const val = document.getElementById("q12-val").value;
+        const days = document.getElementById("q12-days").value;
+        const res = testCookieManagement(action, key, val, days);
+        document.getElementById("q12-result").innerText = res;
+      }
+
+      function executeQ13() {
+        const email = document.getElementById("q13-email").value;
+        const phone = document.getElementById("q13-phone").value;
+        const password = document.getElementById("q13-password").value;
+        const res = validateFormInputs(email, phone, password);
+        document.getElementById("q13-result").innerText = res.message;
+      }
+
+      // Automatically start live clock on page load
+      window.addEventListener("load", () => {
+        displayRealTimeClock();
+        executeQ6();
+      });
+    </script>
+  </body>
+</html>

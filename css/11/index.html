@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Lab Report 11</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main id="main-content">
+      <div class="forms-wrapper">
+        <!--Login Form -->
+        <div class="form-container login-container" id="login-card">
+          <h1 class="facebook-logo">facebook</h1>
+          <div class="form-card">
+            <h2 class="card-title">Log in to Facebook</h2>
+            <form action="#" method="POST">
+              <div class="field-group">
+                <input
+                  type="text"
+                  placeholder="Email address or phone number"
+                  required
+                />
+              </div>
+              <div class="field-group">
+                <input type="password" placeholder="Password" required />
+              </div>
+              <button type="submit" class="btn btn-primary btn-login">
+                Log in
+              </button>
+              <a href="#" class="link-forgot">Forgotten account?</a>
+              <div class="divider"><span>or</span></div>
+              <a href="#signup-card" class="btn btn-secondary btn-create"
+                >Create new account</a
+              >
+            </form>
+          </div>
+        </div>
+
+        <!-- Facebook Signup Form -->
+        <div class="form-container signup-container" id="signup-card">
+          <h1 class="facebook-logo">facebook</h1>
+          <div class="form-card">
+            <h2 class="card-heading">Create a new account</h2>
+            <p class="card-subheading">It's quick and easy.</p>
+            <hr class="card-divider" />
+            <form action="#" method="POST">
+              <div class="name-row">
+                <input type="text" placeholder="First name" required />
+                <input type="text" placeholder="Last name" required />
+              </div>
+
+              <div class="field-group">
+                <input
+                  type="text"
+                  placeholder="Mobile number or email"
+                  required
+                />
+              </div>
+              <div class="field-group">
+                <input type="password" placeholder="New password" required />
+              </div>
+
+              <div class="meta-section">
+                <label class="meta-label"
+                  >Birthday
+                  <span
+                    class="info-icon tooltip"
+                    data-tooltip="Click for more information about entering your birthday"
+                    >?</span
+                  ></label
+                >
+                <div class="select-row">
+                  <select name="birthday_month">
+                    <option>Jan</option>
+                    <option>Feb</option>
+                    <option>Mar</option>
+                    <option>Apr</option>
+                    <option>May</option>
+                    <option>Jun</option>
+                    <option>Jul</option>
+                    <option>Aug</option>
+                    <option>Sep</option>
+                    <option>Oct</option>
+                    <option>Nov</option>
+                    <option>Dec</option>
+                  </select>
+                  <select name="birthday_day">
+                    <option>17</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>21</option>
+                  </select>
+                  <select name="birthday_year">
+                    <option>2022</option>
+                    <option>2023</option>
+                    <option>2024</option>
+                    <option>2025</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Gender -->
+              <div class="meta-section">
+                <label class="meta-label"
+                  >Gender
+                  <span
+                    class="info-icon tooltip"
+                    data-tooltip="Click for more information about selecting a gender"
+                    >?</span
+                  ></label
+                >
+                <div class="radio-row">
+                  <label class="radio-box">
+                    <span>Female</span>
+                    <input type="radio" name="gender" value="female" />
+                  </label>
+                  <label class="radio-box">
+                    <span>Male</span>
+                    <input type="radio" name="gender" value="male" />
+                  </label>
+                  <label class="radio-box">
+                    <span>Custom</span>
+                    <input type="radio" name="gender" value="custom" />
+                  </label>
+                </div>
+              </div>
+
+              <!-- Disclaimers -->
+              <p class="terms-text">
+                People who use our service may have uploaded your contact
+                information to Facebook. <a href="#">Learn more.</a>
+              </p>
+              <p class="terms-text">
+                By clicking Sign Up, you agree to our <a href="#">Terms</a>,
+                <a href="#">Privacy Policy</a> and
+                <a href="#">Cookies Policy</a>. You may receive SMS
+                Notifications from us and can opt out any time.
+              </p>
+
+              <button type="submit" class="btn btn-secondary btn-signup">
+                Sign Up
+              </button>
+              <a href="#login-card" class="link-already"
+                >Already have an account?</a
+              >
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

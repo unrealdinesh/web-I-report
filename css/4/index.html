@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Lab Report 4 - Attribute Selectors</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="page-container">
+      <h1 class="main-title">
+        4. Use CSS attribute selectors for different elements.
+      </h1>
+
+      <div class="grid-layout">
+        <!-- 1. [attribute] Selector -->
+        <div class="card">
+          <h2 class="card-title">1. [attribute] Selector</h2>
+          <p class="card-desc">
+            Selects elements with the specified attribute, regardless of value.
+          </p>
+          <div class="output-box">
+            <div class="input-group">
+              <input type="text" data-required placeholder="Required field" />
+              <input type="text" placeholder="Optional field" />
+            </div>
+            <p data-required>This paragraph has the data-required attribute</p>
+          </div>
+        </div>
+
+        <!-- 2. [attribute="value"] Selector -->
+        <div class="card">
+          <h2 class="card-title">2. [attribute="value"] Selector</h2>
+          <p class="card-desc">
+            Selects elements with the exact specified attribute value.
+          </p>
+          <div class="output-box">
+            <div class="btn-group">
+              <button type="button" class="btn-regular">Regular Button</button>
+              <button type="submit">Submit Button</button>
+              <input type="submit" value="Submit Input" />
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. [attribute~="value"] Selector -->
+        <div class="card">
+          <h2 class="card-title">3. [attribute~="value"] Selector</h2>
+          <p class="card-desc">
+            Selects elements whose attribute value contains the specified word
+            in a space-separated list.
+          </p>
+          <div class="output-box">
+            <p class="note highlight">
+              This paragraph has the highlight class
+            </p>
+            <p class="note">This paragraph doesn't have highlight</p>
+            <p class="highlight-text">
+              This won't be selected (no exact match)
+            </p>
+          </div>
+        </div>
+
+        <!-- 4. [attribute|="value"] Selector -->
+        <div class="card">
+          <h2 class="card-title">4. [attribute|="value"] Selector</h2>
+          <p class="card-desc">
+            Selects elements whose attribute value is exactly "value" or begins
+            with "value-".
+          </p>
+          <div class="output-box">
+            <p lang="en">English content</p>
+            <p lang="en-US">American English content</p>
+            <p lang="en-GB">British English content</p>
+            <p lang="fr">French content (not selected)</p>
+          </div>
+        </div>
+
+        <!-- 5. [attribute^="value"] Selector -->
+        <div class="card">
+          <h2 class="card-title">5. [attribute^="value"] Selector</h2>
+          <p class="card-desc">
+            Selects elements whose attribute value begins with "value".
+          </p>
+          <div class="output-box">
+            <ul class="link-list">
+              <li>
+                <a href="https://example.com">Secure HTTPS Link</a>
+              </li>
+              <li>
+                <a href="http://example.com">Regular HTTP Link</a>
+              </li>
+              <li>
+                <a href="https://another.com">Another HTTPS Link</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 6. [attribute$="value"] Selector -->
+        <div class="card">
+          <h2 class="card-title">6. [attribute$="value"] Selector</h2>
+          <p class="card-desc">
+            Selects elements whose attribute value ends with "value".
+          </p>
+          <div class="output-box">
+            <div class="image-gallery">
+              <img
+                src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=150&q=80&ext=.jpg"
+                alt="Landscape 1"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=150&q=80&ext=.jpg"
+                alt="Landscape 2"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=150&q=80&ext=.jpg"
+                alt="Landscape 3"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. [attribute*="value"] Selector -->
+        <div class="card">
+          <h2 class="card-title">7. [attribute*="value"] Selector</h2>
+          <p class="card-desc">
+            Selects elements whose attribute value contains the substring
+            "value" anywhere.
+          </p>
+          <div class="output-box">
+            <p title="important-notice">This is important</p>
+            <p title="regular-info">Regular notice</p>
+            <p title="very-important-alert">Important alert</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

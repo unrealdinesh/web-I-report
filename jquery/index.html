@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Lab Report - Programs 1 &amp; 2 (Q14 &amp; Q15)</title>
+
+    <!-- External CSS Styling -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Include jQuery from CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Include jQuery Lab Scripts -->
+    <script src="1.js"></script>
+    <script src="2.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>jQuery Lab Report - Programs 1 &amp; 2</h1>
+
+      <!-- Question 1 / 14 -->
+      <div class="card">
+        <h2>
+          1 (Q14). Toggle Webpage Background Color &amp; Paragraph Visibility
+        </h2>
+        <p>
+          Write a jQuery program to toggle the background color of a webpage.
+          Also, toggle a paragraph's visibility when a button is clicked.
+        </p>
+
+        <div class="btn-group">
+          <button id="toggle-bg-btn">Toggle Background Color</button>
+          <button id="toggle-para-btn" class="btn-toggle-para">
+            Toggle Paragraph Visibility
+          </button>
+        </div>
+
+        <p id="target-paragraph" class="sample-paragraph">
+          <b>Sample Paragraph:</b> This paragraph's visibility is dynamically
+          controlled using jQuery <code>.slideToggle()</code> effect!
+        </p>
+
+        <div class="result-box" id="bg-status-text">
+          Current Mode: Light Theme
+        </div>
+        <div class="result-box" id="para-status-text">
+          Paragraph Status: Visible
+        </div>
+      </div>
+
+      <!-- Question 2 / 15 -->
+      <div class="card">
+        <h2>2 (Q15). Animate a Car (Forward, Stop &amp; Reverse)</h2>
+        <p>
+          Write a jQuery program to animate a car with options to move forward,
+          stop, and reverse.
+        </p>
+
+        <div id="track">
+          <div id="car">
+            <svg
+              width="75"
+              height="40"
+              viewBox="0 0 100 50"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 30 L25 15 L65 15 L80 30 L92 30 C95 30 97 32 97 35 L97 40 L3 40 L3 35 C3 32 5 30 8 30 Z"
+                class="car-body"
+                fill="#1e70bf"
+              />
+              <path d="M28 17 L62 17 L74 28 L23 28 Z" fill="#93c5fd" />
+              <line
+                x1="47"
+                y1="17"
+                x2="47"
+                y2="28"
+                stroke="#1e70bf"
+                stroke-width="2"
+              />
+              <rect x="92" y="32" width="4" height="4" rx="1" fill="#fef08a" />
+              <rect x="4" y="32" width="3" height="4" rx="1" fill="#ef4444" />
+              <circle cx="25" cy="40" r="9" fill="#1e293b" />
+              <circle cx="25" cy="40" r="4" fill="#94a3b8" />
+              <circle cx="75" cy="40" r="9" fill="#1e293b" />
+              <circle cx="75" cy="40" r="4" fill="#94a3b8" />
+            </svg>
+          </div>
+          <div class="road-line"></div>
+        </div>
+
+        <div class="btn-group">
+          <button id="btn-forward">Move Forward</button>
+          <button id="btn-stop" class="btn-stop">Stop</button>
+          <button id="btn-reverse" class="btn-reverse">Reverse</button>
+        </div>
+
+        <div class="result-box" id="car-status">
+          Status: Ready at start position
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,196 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f9;
+  color: #212529;
+  padding: 20px;
+  line-height: 1.6;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Dark theme class for Question 1 toggle */
+body.dark-theme {
+  background-color: #1a1a1a;
+  color: #f8fafc;
+}
+
+body.dark-theme .card {
+  background-color: #000000;
+  border-color: rgb(102, 102, 102);
+  color: #f8fafc;
+}
+
+body.dark-theme .card h2 {
+  color: #60a5fa;
+  border-bottom-color: #60a5fa;
+}
+
+body.dark-theme .card p {
+  color: #cbd5e1;
+}
+
+body.dark-theme .result-box {
+  background-color: #1e293b;
+  border-color: #475569;
+  color: #f8fafc;
+}
+
+body.dark-theme #track {
+  background-color: #1e293b;
+  border-color: #475569;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #1e70bf;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 26px;
+}
+
+body.dark-theme h1 {
+  color: #60a5fa;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.card h2 {
+  font-size: 18px;
+  color: #333333;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #1e70bf;
+  padding-bottom: 5px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 15px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+button {
+  background-color: #1e70bf;
+  color: #ffffff;
+  border: none;
+  padding: 9px 18px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #155799;
+}
+
+.btn-toggle-para {
+  background-color: #5cb85c;
+}
+
+.btn-toggle-para:hover {
+  background-color: #4cae4c;
+}
+
+.btn-stop {
+  background-color: #d9534f;
+}
+
+.btn-stop:hover {
+  background-color: #c9302c;
+}
+
+.btn-reverse {
+  background-color: #f0ad4e;
+}
+
+.btn-reverse:hover {
+  background-color: #ec971f;
+}
+
+.sample-paragraph {
+  background-color: #e0f2fe;
+  color: #0369a1 !important;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+body.dark-theme .sample-paragraph {
+  background-color: #e0f2fe;
+
+}
+
+.result-box {
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  padding: 12px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 13px;
+  color: #212529;
+  margin-top: 10px;
+}
+
+/* Track & Car animation styles */
+#track {
+  width: 100%;
+  height: 200px;
+  background-color: #e2e8f0;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+#car {
+  position: absolute;
+  bottom: 12px;
+  left: 0px;
+  width: 75px;
+  height: 40px;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.dark-theme #car .car-body {
+  fill: #3b82f6;
+}
+
+.road-line {
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  height: 4px;
+  background: repeating-linear-gradient(
+    90deg,
+    #fff,
+    #fff 20px,
+    transparent 20px,
+    transparent 40px
+  );
+}

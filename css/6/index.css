@@ -1,0 +1,231 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #eaf0db;
+}
+
+#main-content {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-box {
+  background-color: #ffffff;
+  border: 1.5px solid #b84a28;
+  padding: 24px 32px;
+  border-radius: 2px;
+}
+
+.anchor-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.link-list p {
+  margin-bottom: 14px;
+  font-size: 17px;
+}
+
+.link-list p:last-child {
+  margin-bottom: 0;
+}
+
+a:link {
+  color: #d32f2f;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #c67228;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #1976d2;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #2e7d32;
+  text-decoration: underline;
+}
+
+.tooltip-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.tooltip-subtitle {
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.buttons-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.button-row {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+}
+
+.tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  background-color: #1e2b37;
+  color: #ffffff;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  white-space: nowrap;
+  z-index: 100;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease,
+    transform 0.2s ease;
+}
+
+.tooltip::before {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  border-style: solid;
+  z-index: 100;
+  pointer-events: none;
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease;
+}
+
+.tooltip:hover::after,
+.tooltip:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.tooltip-top::after {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+}
+.tooltip-top::before {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-2px);
+  border-width: 6px 6px 0 6px;
+  border-color: #1e2b37 transparent transparent transparent;
+}
+
+.tooltip-bottom::after {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+}
+.tooltip-bottom::before {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(2px);
+  border-width: 0 6px 6px 6px;
+  border-color: transparent transparent #1e2b37 transparent;
+}
+
+.tooltip-left::after {
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-8px);
+}
+.tooltip-left::before {
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-2px);
+  border-width: 6px 0 6px 6px;
+  border-color: transparent transparent transparent #1e2b37;
+}
+
+.tooltip-right::after {
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%) translateX(8px);
+}
+.tooltip-right::before {
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%) translateX(2px);
+  border-width: 6px 6px 6px 0;
+  border-color: transparent #1e2b37 transparent transparent;
+}
+
+.tooltip-primary::after {
+  background-color: #2980b9;
+}
+.tooltip-primary.tooltip-top::before {
+  border-top-color: #2980b9;
+}
+
+.tooltip-success::after {
+  background-color: #2ecc71;
+  color: #ffffff;
+}
+.tooltip-success.tooltip-top::before {
+  border-top-color: #2ecc71;
+}
+
+.tooltip-warning::after {
+  background-color: #f39c12;
+  color: #ffffff;
+}
+.tooltip-warning.tooltip-top::before {
+  border-top-color: #f39c12;
+}
+
+.tooltip-danger::after {
+  background-color: #e74c3c;
+  color: #ffffff;
+}
+.tooltip-danger.tooltip-top::before {
+  border-top-color: #e74c3c;
+}

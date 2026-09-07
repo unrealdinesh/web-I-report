@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 250" width="200" height="250">
+  <!-- Pink Tree Foliage -->
+  <g fill="#f48fb1" opacity="0.85">
+    <circle cx="100" cy="55" r="45" />
+    <circle cx="70" cy="80" r="35" />
+    <circle cx="130" cy="75" r="38" />
+    <circle cx="100" cy="95" r="40" />
+    <circle cx="60" cy="45" r="30" fill="#f06292" />
+    <circle cx="120" cy="40" r="32" fill="#f06292" />
+  </g>
+
+  <!-- Trunk & Branches -->
+  <path d="M 95 250 Q 100 170 98 110" stroke="#4e342e" stroke-width="14" fill="none" stroke-linecap="round" />
+  <path d="M 98 160 Q 130 145 175 145" stroke="#4e342e" stroke-width="7" fill="none" stroke-linecap="round" />
+  <path d="M 98 120 Q 65 105 45 105" stroke="#4e342e" stroke-width="6" fill="none" stroke-linecap="round" />
+  <path d="M 98 90 Q 125 75 145 70" stroke="#4e342e" stroke-width="5" fill="none" stroke-linecap="round" />
+
+  <!-- Owl sitting on the right branch -->
+  <g transform="translate(150, 115)">
+    <!-- Ears / Tufts -->
+    <polygon points="-12,-16 -8,-24 -3,-14" fill="#5d4037" />
+    <polygon points="3,-14 8,-24 12,-16" fill="#5d4037" />
+    
+    <!-- Body -->
+    <ellipse cx="0" cy="0" rx="14" ry="17" fill="#6d4c41" />
+    <!-- Chest / Belly -->
+    <ellipse cx="0" cy="4" rx="9" ry="11" fill="#d7ccc8" />
+    <!-- Chest feathers pattern -->
+    <path d="M -4,2 Q 0,5 4,2 M -4,6 Q 0,9 4,6" stroke="#8d6e63" stroke-width="1.5" fill="none" />
+
+    <!-- Big Eyes -->
+    <circle cx="-6" cy="-5" r="6" fill="#ffffff" stroke="#3e2723" stroke-width="1" />
+    <circle cx="6" cy="-5" r="6" fill="#ffffff" stroke="#3e2723" stroke-width="1" />
+    <circle cx="-6" cy="-5" r="3" fill="#212121" />
+    <circle cx="6" cy="-5" r="3" fill="#212121" />
+    <circle cx="-7" cy="-7" r="1" fill="#ffffff" />
+    <circle cx="5" cy="-7" r="1" fill="#ffffff" />
+
+    <!-- Beak -->
+    <polygon points="-2,-1 0,4 2,-1" fill="#ffb300" />
+
+    <!-- Feet clutching branch -->
+    <ellipse cx="-4" cy="17" rx="3" ry="2" fill="#ffb300" />
+    <ellipse cx="4" cy="17" rx="3" ry="2" fill="#ffb300" />
+  </g>
+</svg>

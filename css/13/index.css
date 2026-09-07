@@ -1,0 +1,331 @@
+/* Reset & Box Sizing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #eef2f5;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333333;
+  line-height: 1.5;
+  padding: 20px 10px;
+}
+
+/* Main Outer Layout Table */
+.main-layout-table {
+  width: 950px;
+  max-width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #c5d0dc;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+/* Row 1: Header Section */
+.header-cell {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 35px 20px 25px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.site-title {
+  color: #1e70bf;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 6px;
+}
+
+.site-tagline {
+  color: #666666;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* Row 2: Navigation Bar */
+.nav-cell {
+  background-color: #2b2b2b;
+  border-bottom: 4px solid #1e70bf;
+}
+
+.nav-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.nav-table td {
+  padding: 0;
+}
+
+.nav-table a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 12px 16px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-table a:hover,
+.nav-table a.active {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+/* Row 3: 3-Column Content Body */
+.sidebar-left-cell {
+  width: 220px;
+  padding: 25px 20px;
+  border-right: 1px solid #eeeeee;
+  background-color: #ffffff;
+}
+
+.main-content-cell {
+  padding: 25px 30px;
+  border-right: 1px solid #eeeeee;
+  background-color: #ffffff;
+}
+
+.sidebar-right-cell {
+  width: 220px;
+  padding: 25px 20px;
+  background-color: #ffffff;
+}
+
+/* Section Headings */
+.section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #222222;
+  margin-bottom: 14px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #1e70bf;
+  display: block;
+}
+
+.main-news-heading {
+  font-size: 18px;
+  color: #1e70bf;
+  margin-bottom: 22px;
+}
+
+/* Left Sidebar - Trending List */
+.trending-list {
+  list-style-type: square;
+  padding-left: 18px;
+  margin-bottom: 30px;
+}
+
+.trending-list li {
+  margin-bottom: 14px;
+}
+
+.trending-list a {
+  color: #222222;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  line-height: 1.35;
+  display: inline-block;
+}
+
+.trending-list a:hover {
+  color: #1e70bf;
+  text-decoration: underline;
+}
+
+/* Featured Card */
+.featured-card {
+  background-color: #ffffff;
+  margin-top: 10px;
+}
+
+.featured-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #222222;
+  margin-bottom: 6px;
+}
+
+.featured-text {
+  font-size: 12px;
+  color: #555555;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.blue-link {
+  color: #1e70bf;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.blue-link:hover {
+  text-decoration: underline;
+}
+
+/* Middle Main News Articles */
+.news-article {
+  margin-bottom: 10px;
+}
+
+.article-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #222222;
+  margin-bottom: 4px;
+  line-height: 1.35;
+}
+
+.article-date {
+  font-size: 12px;
+  color: #888888;
+  margin-bottom: 10px;
+}
+
+.article-excerpt {
+  font-size: 13px;
+  color: #555555;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.read-more {
+  color: #1e70bf;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+.article-divider {
+  border: none;
+  border-top: 1px solid #eeeeee;
+  margin: 20px 0;
+}
+
+/* Right Sidebar - Events & Newsletter */
+.events-list {
+  list-style-type: square;
+  padding-left: 18px;
+  margin-bottom: 30px;
+}
+
+.events-list li {
+  margin-bottom: 14px;
+}
+
+.event-name {
+  font-size: 12px;
+  font-weight: 700;
+  color: #222222;
+}
+
+.event-date {
+  font-size: 11px;
+  color: #777777;
+}
+
+.newsletter-block {
+  margin-top: 10px;
+}
+
+.newsletter-desc {
+  font-size: 12px;
+  color: #555555;
+  margin-bottom: 12px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.email-input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  font-size: 12px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.email-input:focus {
+  border-color: #1e70bf;
+}
+
+.subscribe-btn {
+  width: 100%;
+  padding: 8px;
+  background-color: #1e70bf;
+  color: #ffffff;
+  border: none;
+  border-radius: 2px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.subscribe-btn:hover {
+  background-color: #155799;
+}
+
+/* Row 4: Footer Section */
+.footer-cell {
+  background-color: #2b2b2b;
+  color: #dddddd;
+  text-align: center;
+  padding: 22px 20px;
+  font-size: 12px;
+  border-top: 1px solid #444444;
+}
+
+.copyright-text {
+  margin-bottom: 6px;
+  color: #cccccc;
+}
+
+.social-links {
+  color: #aaaaaa;
+}
+
+.social-links a {
+  color: #1e70bf;
+  text-decoration: none;
+  margin: 0 4px;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Table Fallback for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .main-layout-table {
+    width: 100%;
+  }
+
+  .sidebar-left-cell,
+  .main-content-cell,
+  .sidebar-right-cell {
+    display: block;
+    width: 100% !important;
+    border-right: none;
+    border-bottom: 1px solid #eeeeee;
+    padding: 20px;
+  }
+}
