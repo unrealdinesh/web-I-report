@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="bookstore.xsl"?>
+<!DOCTYPE bookstore SYSTEM "bookstore.dtd">
+<bookstore>
+  <book category="cooking">
+    <title lang="en">Everyday Italian</title>
+    <author>Giada De Laurentiis</author>
+    <year>2005</year>
+    <price>30.00</price>
+  </book>
+  <book category="web">
+    <title lang="en">Web Technology &amp; Development</title>
+    <author>Dinesh Basnet</author>
+    <year>2024</year>
+    <price>65.50</price>
+  </book>
+  <book category="database">
+    <title lang="en">Database System Concepts</title>
+    <author>Abraham Silberschatz</author>
+    <year>2020</year>
+    <price>85.00</price>
+  </book>
+  <book category="programming">
+    <title lang="en">Learning XML</title>
+    <author>Erik T. Ray</author>
+    <year>2003</year>
+    <price>39.95</price>
+  </book>
+</bookstore>

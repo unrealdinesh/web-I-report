@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Definition of Simple Elements -->
+  <xs:element name="author" type="xs:string"/>
+  <xs:element name="year" type="xs:integer"/>
+  <xs:element name="price" type="xs:decimal"/>
+
+  <!-- Definition of Attributes -->
+  <xs:attribute name="lang" type="xs:string"/>
+  <xs:attribute name="category" type="xs:string"/>
+
+  <!-- Definition of Complex Elements -->
+  <xs:element name="title">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute ref="lang" use="required"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="book">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="title"/>
+        <xs:element ref="author" maxOccurs="unbounded"/>
+        <xs:element ref="year"/>
+        <xs:element ref="price"/>
+      </xs:sequence>
+      <xs:attribute ref="category" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Root Element -->
+  <xs:element name="bookstore">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="book" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

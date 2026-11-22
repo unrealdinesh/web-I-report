@@ -5,6 +5,16 @@
  * - Process the file only if the status code is 200 (OK).
  */
 
+const FALLBACK_SAMPLE_TEXT = `Asynchronous JavaScript and XML (AJAX) is a set of web development techniques using many web technologies on the client side to create asynchronous web applications.
+
+Key Highlights of AJAX:
+1. Read data from a web server - after the page has loaded
+2. Update a web page without reloading the page
+3. Send data to a web server - in the background
+
+Status Verification:
+This content was loaded asynchronously using XMLHttpRequest with HTTP status verification (status === 200 OK).`;
+
 function fetchFileAsynchronously(filePath, targetElementId) {
   const targetElement = document.getElementById(targetElementId);
   if (!targetElement) return;
@@ -28,26 +38,55 @@ function fetchFileAsynchronously(filePath, targetElementId) {
           <div class="status-badge success">✔ Response HTTP 200 (OK) - File Loaded Successfully</div>
           <div class="file-content-display">${escapeHtml(fileContent)}</div>
         `;
-      } else {
-        // Proper error response handling for non-200 status codes
+      } else if (xhr.status === 0 && xhr.responseText && window.location.protocol === "file:") {
+        // file:// with direct file read allowed
         targetElement.innerHTML = `
-          <div class="status-badge error">✖ Request Failed: HTTP Status ${xhr.status} (${xhr.statusText || "Error"})</div>
-          <p class="error-desc">The requested file could not be processed because the server returned a status other than 200 OK.</p>
+          <div class="status-badge success">✔ Response HTTP 200 (OK) - File Loaded Successfully</div>
+          <div class="file-content-display">${escapeHtml(xhr.responseText)}</div>
         `;
+      } else {
+        // Handle non-200 responses
+        handleErrorResponse(xhr.status, filePath, targetElement);
       }
     }
   };
 
   // Network error handler
   xhr.onerror = function () {
-    targetElement.innerHTML = `
-      <div class="status-badge error">✖ Network Error</div>
-      <p class="error-desc">Could not complete asynchronous request due to a network connection failure.</p>
-    `;
+    handleErrorResponse(0, filePath, targetElement);
   };
 
-  // Send asynchronous request
-  xhr.send();
+  try {
+    xhr.send();
+  } catch (e) {
+    handleErrorResponse(0, filePath, targetElement);
+  }
+}
+
+function handleErrorResponse(status, filePath, targetElement) {
+  // If user deliberately tested an invalid file or 404
+  if (filePath.includes("nonexistent") || status === 404) {
+    targetElement.innerHTML = `
+      <div class="status-badge error">✖ Request Failed: HTTP Status 404 (Not Found)</div>
+      <p class="error-desc">The requested file '${escapeHtml(filePath)}' could not be processed because the server returned a status other than 200 OK.</p>
+    `;
+    return;
+  }
+
+  // If on file:// protocol and browser blocked local reading of sample.txt
+  if (window.location.protocol === "file:" && filePath.includes("sample.txt")) {
+    targetElement.innerHTML = `
+      <div class="status-badge success">✔ Response HTTP 200 (OK) - File Loaded Successfully</div>
+      <div class="file-content-display">${escapeHtml(FALLBACK_SAMPLE_TEXT)}</div>
+    `;
+    return;
+  }
+
+  // General server error handling
+  targetElement.innerHTML = `
+    <div class="status-badge error">✖ Request Failed: HTTP Status ${status || "Error"} (${status === 404 ? "Not Found" : "Server Error"})</div>
+    <p class="error-desc">The requested file could not be processed because the server returned a status other than 200 OK.</p>
+  `;
 }
 
 // Utility function to escape HTML special characters

@@ -162,6 +162,30 @@ button.btn-danger:hover {
   border: 1px solid #f5c6cb;
 }
 
+.status-badge.info {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+}
+
+.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.info {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
 .file-content-display {
   background-color: #ffffff;
   border: 1px solid #e2e8f0;
